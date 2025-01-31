@@ -1,0 +1,7 @@
+Data Ingestion
+Spliting or chunking
+Embedding: text -> vector
+Store vectors into vector store
+    vector stores: Chromadb, Faiss-cpu, Lancedb etc
+Query to this vector stores -> will give ans based on similarity search
+

@@ -4,4 +4,25 @@ version = "0.1.0"
 description = "My Rag Application"
 readme = "README.md"
 requires-python = ">=3.10"
-dependencies = []
+dependencies = [
+    "beautifulsoup4>=4.12.3",
+    "chromadb>=0.6.3",
+    "faiss-cpu>=1.10.0",
+    "fastapi>=0.115.8",
+    "lancedb>=0.18.0",
+    "langchain>=0.3.17",
+    "langchain-community>=0.3.16",
+    "langchain-core>=0.3.33",
+    "langchain-openai>=0.3.3",
+    "langserve>=0.3.1",
+    "pypdf>=5.2.0",
+    "python-dotenv>=1.0.1",
+    "sse-starlette>=2.2.1",
+    "streamlit>=1.41.1",
+    "uvicorn>=0.34.0",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
+]
