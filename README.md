@@ -11,9 +11,11 @@ flowchart TD
     D <--> E[Retrievers] 
 
     subgraph Retrieval_chain
+    direction LR
     E --> F[Prompt Template]
 
     subgraph Chain
+    direction LR
     F --> G[LLM]
     end
     end
@@ -22,5 +24,5 @@ flowchart TD
 
     I[User] --> H
 
-    G --> Response --> I[User]
+    G -- Response --> I[User]
 ```
