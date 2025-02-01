@@ -14,10 +14,10 @@ flowchart TD
         direction LR
         E --> F[Prompt Template]
 
-    subgraph Chain
-        direction LR
-        F --> G[LLM]
-    end
+        subgraph Chain
+            direction LR
+            F --> G[LLM]
+        end
     end
     
     H[Query] --> E
