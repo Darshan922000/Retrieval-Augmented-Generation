@@ -6,7 +6,7 @@ flowchart TD
 
     B --> C[Vector Embedding]
 
-    C --> D[Vector Store (Store Vector embeddings)]
+    C --> D[Vector Store]
 
     D <--> E[Retrievers] <-- H[Query] <-- I[User]
 
