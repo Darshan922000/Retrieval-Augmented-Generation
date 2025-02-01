@@ -8,6 +8,7 @@ Query to this vector stores using similarity search -> will give ans based on si
 Now as this query vectors are not so strong for retrieval generation so we will use LLMs for that...
 
 Integrate LLMs
+
 Prompt Template for how llm will respond!! 
     Prompt templates help to translate user input and parameters into instructions for a language model.
 
