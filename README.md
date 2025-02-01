@@ -8,11 +8,15 @@ flowchart TD
 
     C --> D[Vector Store]
 
-    D <--> E[Retrievers] <-- H[Query] <-- I[User]
+    D <--> E[Retrievers] 
 
     E --> F[Prompt Template]
 
     F --> G[LLM]
 
-    G --> J[Response] --> I[User]
+    H[Query] --> E
+
+    I[User] --> H
+
+    G --> Response--> I[User]
 ```
