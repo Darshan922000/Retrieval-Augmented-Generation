@@ -18,9 +18,8 @@ flowchart TD
             direction LR
             F --> G[LLM]
         end
+        H[Query] --> E
     end
-    
-    H[Query] --> E
 
     I[User] --> H
 
