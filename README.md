@@ -10,13 +10,17 @@ flowchart TD
 
     D <--> E[Retrievers] 
 
+    subgroup Retrieval chain
     E --> F[Prompt Template]
 
+    subgraph Chain
     F --> G[LLM]
-
+    end
+    end
+    
     H[Query] --> E
 
     I[User] --> H
 
-    G --> Response--> I[User]
+    G --> Response --> I[User]
 ```
