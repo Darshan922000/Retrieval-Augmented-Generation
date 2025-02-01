@@ -12,7 +12,7 @@ flowchart TD
 
     subgraph Retrieval_chain
         direction LR
-        E --> F[Prompt Template]
+        E -- Query + Relevant documents --> F[Prompt Template]
 
         subgraph Chain
             direction LR
