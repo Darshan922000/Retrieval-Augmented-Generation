@@ -1,0 +1,63 @@
+Data Ingestion
+Spliting or chunking
+Embedding: text -> vector
+Store vectors into vector store
+    vector stores: Chromadb, Faiss-cpu, Lancedb etc
+Query to this vector stores using similarity search -> will give ans based on similarity search
+
+Now as this query vectors are not so strong for retrieval generation so we will use LLMs for that...
+
+Integrate LLMs
+Prompt Template for how llm will respond!! 
+    Prompt templates help to translate user input and parameters into instructions for a language model.
+
+    Inside a Prompt Template, the retrieved documents and user queries are formatted 
+    into a structured prompt before being passed to the LLM.
+
+    Advantage:  Injecting retrieved data, Providing instructions, Ensuring clarity and relevance, Optimizing token usage.
+
+    Ex - You are a helpful AI assistant. Answer the following question using the provided context:
+
+        Context:
+        {retrieved_documents}
+
+        Question:
+        {user_query}
+
+        Answer:
+
+Chains:
+    Chains in LangChain:
+        A Chain in LangChain is a sequence of components (e.g., prompts, LLMs, retrievers) that process input and generate structured output.
+
+    Types of Chains:
+        LLMChain → Prompt → LLM → Output
+        SequentialChain → Multiple chains executed in order.
+        RetrievalQAChain → Retrieves documents, adds context, then queries the LLM.
+        ConversationalRetrievalChain → Keeps chat history while retrieving documents.
+
+    Why Use Chains? → Modular, Customizable, and Automated workflows for LLM applications.
+
+Retrievers:
+    A retriever is an interface that returns documents given an unstructured query. It is more general than a vector store. 
+    A retriever does not need to be able to store documents, only to return (or retrieve) them. Vector stores can be used as the backbone of a retriever
+    A Retriever is a component that fetches relevant documents from a database or vector store based on a user query.
+
+    Why Use a Retriever?
+        Finds relevant information → Helps ground LLM responses.
+        Enhances accuracy → Reduces hallucinations.
+        Optimizes search → Uses embeddings, keyword search, or hybrid retrieval.
+
+    Common Retrievers:
+        VectorStoreRetriever → Uses embeddings for similarity search.
+        BM25Retriever → Keyword-based search (like traditional search engines).
+        MultiQueryRetriever → Reformulates queries for better results.
+
+    Retrievers make RAG applications more reliable by supplying factual context!
+
+Retrieval chain(Retriever + Document chain):
+    Retrieval chain takes in a user query, which is then passed to the retriever to fetch relevant documents. 
+    Those documents and original inputs are then passed to an LLM to generate a response.
+
+Invoke Retrieval Chain.
+
