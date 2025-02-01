@@ -10,7 +10,7 @@ flowchart TD
 
     D <--> E[Retrievers] 
 
-    subgroup Retrieval_chain
+    subgraph Retrieval_chain
     E --> F[Prompt Template]
 
     subgraph Chain
