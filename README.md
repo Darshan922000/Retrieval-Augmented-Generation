@@ -10,13 +10,13 @@ flowchart TD
 
     D <--> E[Retrievers] 
 
-    subgraph Retrieval_chain
-    direction LR
-    E --> F[Prompt Template]
+    subgraph [Retrieval_chain]
+        direction LR
+        E --> F[Prompt Template]
 
-    subgraph Chain
-    direction LR
-    F --> G[LLM]
+    subgraph [Chain]
+        direction LR
+        F --> G[LLM]
     end
     end
     
