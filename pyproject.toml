@@ -19,6 +19,7 @@ dependencies = [
     "python-dotenv>=1.0.1",
     "sse-starlette>=2.2.1",
     "streamlit>=1.41.1",
+    "unstructured>=0.16.19",
     "uvicorn>=0.34.0",
 ]
 
